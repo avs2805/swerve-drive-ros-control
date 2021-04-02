@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<launch>
+    <!-- load config file -->
+    <rosparam file="$(find swerve_hardware_interface)/config/controllers.yaml" command="load" />
+    <!-- HW Interface Node -->
+    <node pkg="swerve_hardware_interface" type="swerve_hardware_interface" name="swerve_hardware_interface" output="screen" />
+
+    <!-- Controller Spawner Node -->
+    <node pkg="controller_manager" type="spawner" name="controller_spawner" output="screen" ns="/" />
+
+</launch>
