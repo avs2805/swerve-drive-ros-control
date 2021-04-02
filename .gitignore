@@ -1,0 +1,5 @@
+# VS Code Build & Task settings
+.vscode/
+
+# Build Artifacts
+build/
